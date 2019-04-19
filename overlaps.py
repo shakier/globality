@@ -65,7 +65,7 @@ def mpProcessOverlaps(all_overlaps, max_overlaps):
     overlap_list = max_overlaps
     while len(overlap_list) > 1:
         print ("processing overlap list of length: " + str(len(overlap_list)))
-        chunks = chunkIt(overlap_list, 100)
+        chunks = chunkIt(overlap_list, 2)
         manager = Manager()
         tmp_dict = manager.dict()
         overlap_parts = manager.list(chunks)
